@@ -8,13 +8,13 @@
 , port: "<%= @listenport %>"
 , flushInterval: "<%= @flushinterval %>"
 , percentThreshold: [<%= @percentthreshold.join(', ') %>]
-<% if @graphite_options.length > 0 %->
+<%- if @graphite_options.length > 0 %->
 , graphite: {
-  <% @graphite_options.each do |k, v| -%>
+  <%- @graphite_options.each do |k, v| -%>
     <%= k %>: <%= v %>,
-  <% end -%>
+  <%- end -%>
 }
-<% end -%>
+<%- end -%>
 <% @config.each do |k, v| -%>
 , <%= k %>: <%= v %>
 <% end -%>
