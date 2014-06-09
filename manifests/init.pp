@@ -1,7 +1,6 @@
 class statsd(
   $graphiteserver   = $statsd::params::graphiteserver,
   $graphiteport     = $statsd::params::graphiteport,
-  $graphite_options = $statsd::params::graphite_options,
   $backends         = $statsd::params::backends,
   $address          = $statsd::params::address,
   $listenport       = $statsd::params::listenport,
