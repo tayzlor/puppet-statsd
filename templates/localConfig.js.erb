@@ -9,8 +9,7 @@
 , flushInterval: "<%= @flushinterval %>"
 , percentThreshold: [<%= @percentthreshold.join(', ') %>]
 , graphite: {
-    globalPrefix: "stats.<%= @environment %>",
-    globalSuffix: require('os').hostname().split('.')[0],
+    globalPrefix: "stats.<%= @environment %>." + require('os').hostname().split('.')[0],
     legacyNamespace: false,
   }
 <% @config.each do |k, v| -%>
